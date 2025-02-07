@@ -6,7 +6,7 @@ find_package(Threads REQUIRED)
 
 set(CMAKE_C_STANDARD 11)
 
-execute_process(COMMAND at -f ./run.sh now
+execute_process(COMMAND at -f ./run.sh now + 1 minutes
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} )
 
 add_executable(proxy proxy.c)
